@@ -215,5 +215,56 @@ var carList = {
             color: ['red','white','black']   
         },
     },
-    
+    suzuki : {
+        swift :{
+            model:'2024',
+            seatcapacity:'5 Person',
+            fuleType : 'Petrol',
+            transmission :'Type	Auto',
+            mileage: "16 to 20 Km/Liter",
+            wheel :	'16 Inches',
+            price: '5,500,000 PKR',  
+            color: ['red','white','black']   
+        },
+        alto :{
+            model:'2023',
+            seatcapacity:'5 Person',
+            fuleType : 'Petrol',
+            transmission :'Type	Manual',
+            mileage: "18 to 20 Km/Liter",
+            wheel :	'15 Inches',
+            price: '3,500,000 PKR',
+            color: ['red','white','black']   
+        },
+        cultus :{
+            model:'2022',
+            seatcapacity:'5 Person',
+            fuleType : 'Petrol',
+            transmission :'Type	Auto',
+            mileage: "14 to 18 Km/Liter",
+            wheel :	'16 in',
+            price: '3,000,000 PKR',  
+            color: ['black','white','silver']      
+        },
+        vegonR : {
+            model:'2024',
+            seatcapacity:'5 Person',
+            fuleType : 'Petrol',
+            transmission :'Auto',
+            Mileage: "16 to 20 Km/Liter",
+            Wheel :	'15 Inches',
+            price: '2,900,000 PKR',  
+            color: ['red','white','black']   
+        },
+        mehran : {
+            model:'2021',
+            seatcapacity:'4 Person',
+            fuleType : 'Petrol',
+            Transmission :'Type	Manual',
+            Mileage: "14 to 18 KM/LITER",
+            wheel :	'12 in',
+            price: '1,500,000 PKR',
+            color: ['black','white','silver']   
+        }
+    }
 }
