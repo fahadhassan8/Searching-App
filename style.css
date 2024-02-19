@@ -11,3 +11,58 @@ header{
 .navbar{
     background-color: #fff !important;
 }
+#main{
+    padding: 5em;
+}
+#main img{
+    object-fit: contain;
+}
+.black{
+    width:16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #000;
+    border: 1px solid #000;
+}
+.white{
+    width:16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+.red{
+    width:16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: red;
+    border: 1px solid #000;
+}
+.silver{
+    width:16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: rgb(180, 179, 179);
+    border: 1px solid #000;
+}
+.gray{
+    width:16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: gray;
+    border: 1px solid #000;
+}
+.blue{
+    width:16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid blue;
+}
+.pink{
+    width:16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: rgb(244, 184, 194);
+    border: 1px solid #000;
+}
