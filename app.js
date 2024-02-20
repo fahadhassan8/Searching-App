@@ -321,9 +321,15 @@ var carList = {
   },
 }
 document.getElementById('main');
+document.getElementById('brand');
+document.getElementById('model');
+brand.innerHTML += `<option >--Select Brand--</option>`
+model.innerHTML += `<option >--Select Model--</option>`
+
 for(var key in carList){
+  brand.innerHTML += `<option value="${key}">${key}</option>`
     for(var key1 in carList[key]){
-            var obj = carList[key][key1]
+      var obj = carList[key][key1]
             var colorDiv = "";
             for(var i = 0; i < obj.color.length; i++){
                 colorDiv += `<div class="${obj.color[i]}"></div>`
@@ -348,3 +354,14 @@ for(var key in carList){
                 </div>`
         }
     }
+
+let setModel = () =>{
+  model.innerHTML = "";
+  model.innerHTML += `<option >--Select Model--</option>`
+  for(var key in carList[brand.value])
+  model.innerHTML += `<option value="${key}">${key}</option>`
+}
+
+function searchCar(){
+  
+}
