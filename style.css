@@ -74,3 +74,6 @@ header{
     height: 170px;
     object-fit: contain;
 }
+.searchAlert{
+    padding-top: 5em;
+}

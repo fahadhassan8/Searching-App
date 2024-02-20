@@ -166,7 +166,7 @@ var carList = {
       seatcapacity: "5 Person",
       fuleType: "Petrol",
       transmission: "Type/Automatic",
-      Mileage: "14 to 18 Km/Liter",
+      mileage: "14 to 18 Km/Liter",
       Wheel: "14 Inches",
       price: "23,200,000 PKR",
       color: ["red",'gray', "white", "black"],
@@ -190,7 +190,7 @@ var carList = {
       seatcapacity: "5 Person",
       fuleType: "Petrol",
       transmission: "Type/Automatic",
-      Mileage: "14 to 16 Km/Liter",
+      mileage: "14 to 16 Km/Liter",
       Wheel: "16 Inches",
       price: "10,199,000 PKR",
       color: ["red", "gray","white", "black"],
@@ -320,9 +320,9 @@ var carList = {
     },
   },
 }
-document.getElementById('main');
-document.getElementById('brand');
-document.getElementById('model');
+var main = document.getElementById('main');
+var brand = document.getElementById('brand');
+var model = document.getElementById('model');
 brand.innerHTML += `<option >--Select Brand--</option>`
 model.innerHTML += `<option >--Select Model--</option>`
 
@@ -363,5 +363,30 @@ let setModel = () =>{
 }
 
 function searchCar(){
-  
+  var carDetail = document.getElementById('car-detail');
+  main.style.display = "none";
+  carDetail.style.display = "flex";
+  var car = carList[brand.value][model.value]
+  carDetail.innerHTML = `
+  <div class="card mb-3" style="height: 220px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="${car.image || 'assets/images/city1.jpg'}" class="img-fluid rounded-start" style="object-fit: contain;" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">${model.value.toUpperCase()}</h5>
+        <p class="card-text">${car.mileage}
+        </br>
+        ${car.transmission}
+        </p>
+         <h6>${car.price}</h6>
+         <div class="d-flex gap-2">
+         ${colorDiv}
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+`
 }
