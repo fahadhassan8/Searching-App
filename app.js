@@ -323,6 +323,7 @@ var carList = {
 var main = document.getElementById('main');
 var brand = document.getElementById('brand');
 var model = document.getElementById('model');
+var carDetail = document.getElementById('car-detail');
 brand.innerHTML += `<option >--Select Brand--</option>`
 model.innerHTML += `<option >--Select Model--</option>`
 
@@ -362,7 +363,6 @@ let setModel = () =>{
   model.innerHTML += `<option value="${key}">${key}</option>`
 }
 
-var carDetail = document.getElementById('car-detail');
 function searchCar(){
   main.style.display = "none";
   carDetail.style.display = "flex";
