@@ -1,5 +1,5 @@
 var carList = {
-  honda: {
+  Honda: {
     City: {
       image:"assets/images/city1.jpg",
       name: "City",
@@ -60,7 +60,7 @@ var carList = {
       color: ["white", "silver", "black", "blue"],
     },
   },
-  hyundai: {
+  Hyundai: {
     Santafe: {
       image:"assets/images/santafe6.jpg",
       name: "Santafe",
@@ -122,7 +122,7 @@ var carList = {
       color: ["silver", "white", "black"],
     },
   },
-  toyota: {
+  Toyota: {
     Yaris: {
       image:"assets/images/yaris11.jpg",
       name: "Yaris",
@@ -257,7 +257,7 @@ var carList = {
       color: ["red", "white", "black"],
     },
   },
-  suzuki: {
+  Suzuki: {
     Swift: {
       image:"assets/images/22.jpg",
       name: "Swift",
@@ -336,9 +336,9 @@ for(var key in carList){
             }
             // console.log(obj)
             main.innerHTML += `
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb-3">
-                    <div class="card" style="width: 14rem;">
-                        <img src="${obj.image ||"assets/images/city1.jpg"}" class="card-img-top" alt="...">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb-3" data-aos="fade-up data-aos-anchor-placement="bottom-bottom">
+                    <div class="card" style="width: 100%;">
+                        <img src="${obj.image ||"assets/images/city1.jpg"}" class="card-img-top animate__animated animate__delay-2s" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">${key1.toUpperCase()}  ${obj.model}</h5>
                           <p class="card-text">${obj.mileage}
@@ -357,19 +357,19 @@ for(var key in carList){
 
 let setModel = () =>{
   model.innerHTML = "";
-  model.innerHTML += `<option >--Select Model--</option>`
+  model.innerHTML += `<option>--Select Model--</option>`
   for(var key in carList[brand.value])
   model.innerHTML += `<option value="${key}">${key}</option>`
 }
 
+var carDetail = document.getElementById('car-detail');
 function searchCar(){
-  var carDetail = document.getElementById('car-detail');
   main.style.display = "none";
   carDetail.style.display = "flex";
   var car = carList[brand.value][model.value]
   carDetail.innerHTML = `
-  <div class="card mb-3" style="height: 220px;">
-  <div class="row g-0">
+  <div class="card mb-3" style="height:auto;">
+  <div class="row responsiveAlert g-0">
     <div class="col-md-4">
       <img src="${car.image || 'assets/images/city1.jpg'}" class="img-fluid rounded-start" style="object-fit: contain;" alt="...">
     </div>
@@ -389,4 +389,9 @@ function searchCar(){
   </div>
 </div>
 `
+}
+let clearSearch = () =>{
+  carDetail.innerHTML='';
+  carDetail.style.display = 'none';
+  main.style.display = 'flex';
 }
